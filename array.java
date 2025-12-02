@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class array {
     //Insert an element at a specific position in an array
     public static void main (String[]args){
@@ -27,23 +29,32 @@ public class array {
 
 // find a duplicate element in an array 
 
-String [] arr ={"car","bike","car","car","bus","train","bike","van","cycle","cycle"};
-int count=0;
-for(int i =0;i<arr.length;i++){
-        for(int j =i+1;j<arr.length;j++){
-                if(arr[i].equals(arr[j])){
-                  count++;
-                  //System.out.println("Duplicate element Counts : "+count +"  Dcuplicate elements : "+  arr[i]);
-                }
-        }
+// String [] arr ={"car","bike","car","car","bus","train","bike","van","cycle","cycle"};
 
-        if(count>0){
-            System.out.println("Duplicate element Counts : "+count +"  Dcuplicate elements : "+  arr[i]);
-            count=0;    
-        }
-}
+// int count=0;
+// for(int i =0;i<arr.length;i++){
+//         for(int j =i+1;j<arr.length;j++){
+//                 if(arr[i].equals(arr[j])){
+//                   count++;
+//                   //System.out.println("Duplicate element Counts : "+count +"  Dcuplicate elements : "+  arr[i]);
+//                 }
+//         }
 
+//         if(count>0){
+//             System.out.print("Duplicate element Counts : "+count +"  Dcuplicate elements : "+  arr[i] +"\n");
+//             count=0;    
+//         }
+// }
 
+  // Find the reverse a string;
+
+   String str= "Tamil";
+    String reversedStr="";
+    for(int i=str.length()-1;i>=0;i--){
+        reversedStr+=str.charAt(i);
+        
+    }
+    System.out.println(reversedStr);
 
     }
 }
