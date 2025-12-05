@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class array {
     //Insert an element at a specific position in an array
@@ -46,15 +47,37 @@ public class array {
 //         }
 // }
 
-  // Find the reverse a string;
+  //Find the reverse a string;
+//  String str= "Tamil";
+//     String reversedStr="";
+//     for(int i=str.length()-1;i>=0;i--){
+//         reversedStr+=str.charAt(i);
+//     }
+//     System.out.println(reversedStr);
 
-   String str= "Tamil";
-    String reversedStr="";
-    for(int i=str.length()-1;i>=0;i--){
-        reversedStr+=str.charAt(i);
-        
+// enter amount based on target amount
+    //insert scanner class
+    Scanner sc= new Scanner(System.in);
+    System.out.print("Enter the target amount : ");
+    int enterAmount= sc.nextInt();
+    int targetAmount=1000;
+    if (enterAmount== targetAmount) {
+        System.out.println("Succesfully Reached The minumBalance: "+ enterAmount);
+    }else if(enterAmount< targetAmount){
+        while(enterAmount< targetAmount){
+            System.out.println("Failed to reach the minumBalance Please enter the correct amount again: ");
+            int Amount= sc.nextInt();
+            if(enterAmount< targetAmount){
+            enterAmount+= Amount;
+        }else if(enterAmount== targetAmount){   
+            break;
+        }
     }
-    System.out.println(reversedStr);
-
+    System.out.println("Succesfully Reached The minumBalance: "+ enterAmount);
+}
+    else{
+        System.out.println("You have exceeded the target amount");
     }
+    sc.close();
+}
 }
