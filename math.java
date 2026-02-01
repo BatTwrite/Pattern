@@ -29,14 +29,32 @@ public class math {
 return 0;
     }
 
+    public static int Amstrong(int n){
+          int duplicate=n;
+          int sum=0;
+          while (n>0) {
+            int lastDigit = n%10;
+            sum=sum+(lastDigit*lastDigit*lastDigit);
+            n=n/10;
+          }
+          if (duplicate==sum) {
+            System.out.println("Amstrong Number"+sum);
+            
+          }else{
+            System.out.println("Not An Amstrong Number"+sum);
+          }
 
+        return 0;
+    }
 
 
     public static void main(String[] args){
 //reverse number
         //countLast(7789);
  //palindrom
- PalindRome(1331);
+ //PalindRome(1331);
+ //AmStrong number
+ Amstrong(153);
  
  
 
