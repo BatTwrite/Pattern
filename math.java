@@ -46,7 +46,25 @@ return 0;
 
         return 0;
     }
+    
+    public static int Prime(int n){
+     int count =0;
+     for(int i =1; i*i<=n;i++){
+        if(n%i==0){
+            count++;
+            if((n/i)!=i) count++;
+        }
+    
+     }
 
+     if(count==2){
+        System.out.println("prime Number "+n);
+     }else{
+        System.out.println("Not prime Number "+n);
+     }
+
+        return 0;    
+    }
 
     public static void main(String[] args){
 //reverse number
@@ -54,8 +72,8 @@ return 0;
  //palindrom
  //PalindRome(1331);
  //AmStrong number
- Amstrong(153);
- 
+ //Amstrong(153);
+ Prime(6);
  
 
     }
